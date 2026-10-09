@@ -1,0 +1,5 @@
+# Generated from the combos section of randomcontainers/shaka-packager package.yml by randomcontainers/ci.
+# Do not edit; change package.yml in randomcontainers/shaka-packager instead.
+name: shaka-packager-ffmpeg
+owner: shaka-packager
+with: [ffmpeg]
