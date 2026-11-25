@@ -58,7 +58,7 @@ gh attestation verify oci://ghcr.io/randomcontainers/shaka-packager-ffmpeg:lates
   --repo randomcontainers/shaka-packager-ffmpeg --signer-repo randomcontainers/ci
 ```
 
-Each image also has a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures:
+Images published since November 2026 also have a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures. Tags last built before then have only the attestation.
 
 ```sh
 cosign verify ghcr.io/randomcontainers/shaka-packager-ffmpeg:latest \
@@ -67,7 +67,7 @@ cosign verify ghcr.io/randomcontainers/shaka-packager-ffmpeg:latest \
   --certificate-github-workflow-repository randomcontainers/shaka-packager-ffmpeg
 ```
 
-Images from `ghcr.io/randomcontainers/shaka-packager` are built in [randomcontainers/shaka-packager](https://github.com/randomcontainers/shaka-packager), so name that repository in `--repo` and `--certificate-github-workflow-repository`.
+Images from `ghcr.io/randomcontainers/shaka-packager` are built in [randomcontainers/shaka-packager](https://github.com/randomcontainers/shaka-packager), so use `randomcontainers/shaka-packager` in `--repo` and `--certificate-github-workflow-repository`.
 
 ## Updates
 
